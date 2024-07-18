@@ -8,7 +8,7 @@ const JobListings = ({isHome = false}) => {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      const apiUrl = isHome ? 'https://restful-api-vercel-lovat.vercel.app/jobs?_limit=3' : 'api/jobs'
+      const apiUrl = isHome ? 'https://restful-api-vercel-lovat.vercel.app/jobs?_limit=3' : 'https://restful-api-vercel-lovat.vercel.app/jobs'
       try {
         const res = await fetch(apiUrl);
         const data = await res.json();
