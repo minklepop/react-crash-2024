@@ -16,7 +16,7 @@ import EditJobPage from './pages/EditJobPage';
 const App = () => {
   //Add new job
   const addJob = async (newJob ) => {
-    const res = await fetch('/api/jobs', {
+    const res = await fetch('https://restful-api-vercel-lovat.vercel.app/jobs', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,14 +27,14 @@ const App = () => {
 
   //Delete job
   const deleteJob = async (id) => {
-    const res = await fetch(`/api/jobs/${id}`, {
+    const res = await fetch(`https://restful-api-vercel-lovat.vercel.app/jobs/${id}`, {
       method: 'DELETE',
     })
   }
 
   //Update job
   const updateJob = async (job) => {
-    const res = await fetch(`/api/jobs/${job.id}`, {
+    const res = await fetch(`https://restful-api-vercel-lovat.vercel.app/jobs/${job.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
